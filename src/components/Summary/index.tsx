@@ -1,11 +1,25 @@
+import ReactModal, { useContext } from 'react';
 import { Container } from './styles';
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 import totalImg from '../../assets/total.svg';
+import { TransactionContext } from '../../TransactionContext';
 
 export function Summary() {
+  const data = useContext(TransactionContext);
+
+  console.log(data);
   return (
     <Container>
+  {/* <TransactionContext.Consumer>
+    {
+      (data) => {
+        console.log(data)
+        return <h1>teste</h1>
+      }
+    }
+
+  </TransactionContext.Consumer> */}
       <div>
         <header>
           <p>Entradas</p>
